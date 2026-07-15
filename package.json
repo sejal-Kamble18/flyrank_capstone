@@ -1,0 +1,21 @@
+{
+  "name": "flyrank_capstone",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sejal-Kamble18/flyrank_capstone.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/sejal-Kamble18/flyrank_capstone/issues"
+  },
+  "homepage": "https://github.com/sejal-Kamble18/flyrank_capstone#readme"
+}
