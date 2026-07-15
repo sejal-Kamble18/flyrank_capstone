@@ -13,3 +13,9 @@
 - Keep code modular
 - Follow Conventional Commits
 - Write clean and readable code
+
+## AI Assistant Guidelines
+
+- Suggest best practices
+- Keep explanations concise
+- Generate modular code
