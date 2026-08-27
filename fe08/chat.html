@@ -1,0 +1,9 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Resilient AI Chat | FE-08</title><link rel="stylesheet" href="chat.css"></head>
+<body><main class="app"><header><p class="eyebrow">FLYRANK FE-08</p><h1>Resilient AI Chat</h1><p>Try a prompt or deliberately test a failure state.</p></header>
+<section class="chat-shell" aria-label="AI chat demo"><div id="messages" class="messages" aria-live="polite"><div id="empty" class="empty"><div aria-hidden="true">✦</div><h2>No messages yet</h2><p>Start with a useful question, or try the example below.</p><button class="example" type="button">Help me explain my project in a portfolio</button></div></div>
+<div id="loading" class="skeleton" hidden aria-label="Assistant is responding"><span></span><span></span><span></span></div>
+<div id="error-card" class="error-card" hidden role="alert"><strong id="error-title">Response interrupted</strong><p id="error-text"></p><button id="retry" type="button">Retry this message</button></div>
+<form id="chat-form"><label class="sr-only" for="prompt">Message</label><textarea id="prompt" rows="1" placeholder="Ask about your project..." required></textarea><button id="send" type="submit">Send</button></form></section>
+<section class="test-panel" aria-labelledby="test-heading"><h2 id="test-heading">Failure test controls</h2><p>Use these to demonstrate handled states in your recording.</p><div><button type="button" data-mode="network">Network failure</button><button type="button" data-mode="rate-limit">Rate limit</button><button type="button" data-mode="midstream">Interrupted response</button></div></section></main><script src="chat.js"></script></body></html>
