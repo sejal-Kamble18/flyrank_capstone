@@ -12,7 +12,7 @@ export const analyzeProject = {
   description: "Assess whether a software project is ready to present in a portfolio.",
   inputSchema: analyzeProjectInput,
   execute(input) {
-    const words = input.description.trim().split(/\\s+/).length;
+    const words = input.description.trim().split(/\s+/).length;
     const score = Math.min(95, 45 + (input.hasLiveDemo ? 22 : 0) + Math.min(18, words) + (/(react|next|typescript|ai|api|python)/i.test(input.description) ? 10 : 0));
     return { score, level: score >= 80 ? "Strong" : score >= 62 ? "Promising" : "Early stage", findings: [
       { area: "Project summary", status: words >= 18 ? "Ready" : "Improve", detail: words >= 18 ? "The description gives reviewers useful context." : "Explain the user problem and your contribution in 2-3 more sentences." },
