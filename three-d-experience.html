@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="An interactive 3D orbital artifact built with Three.js.">
+  <title>Orbital Artifact | 3D Web Experience</title>
+  <link rel="stylesheet" href="three-d-experience.css">
+</head>
+<body>
+  <main class="experience">
+    <section class="intro" aria-labelledby="title">
+      <p class="eyebrow">FE-AA2 · Three.js</p>
+      <h1 id="title">Orbital Artifact</h1>
+      <p>Drag the artifact to inspect it. Change its material, toggle motion, and see the scene react immediately.</p>
+      <button id="load-scene" type="button">Start 3D experience</button>
+      <p id="load-note" class="note">The 3D library loads only after you start the scene.</p>
+    </section>
+    <section class="stage" aria-label="Interactive 3D artifact">
+      <div id="fallback" class="fallback" aria-live="polite">
+        <div class="poster-orbit"></div><div class="poster-core"></div>
+        <p>Static preview. Enable motion and start the experience to explore in 3D.</p>
+      </div>
+      <div id="canvas-host" hidden></div>
+      <p id="scene-status" class="sr-only" role="status" aria-live="polite"></p>
+    </section>
+    <section id="controls" class="controls" hidden aria-label="3D experience controls">
+      <label for="color">Artifact color<input id="color" type="color" value="#56d8ff"></label>
+      <label for="surface">Surface<select id="surface"><option value="matte">Matte</option><option value="metal">Metal</option><option value="glass">Glass</option></select></label>
+      <label class="switch"><input id="spin" type="checkbox" checked><span>Auto-rotate</span></label>
+      <p id="performance-note" class="note">Frame rate: measuring...</p>
+    </section>
+  </main>
+  <script type="module" src="three-d-experience.js"></script>
+</body>
+</html>
